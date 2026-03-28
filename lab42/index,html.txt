@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Full Image Animation</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* 全屏盒子，展示整张图 */
+  .box {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://yqx.grazy.cn/public/uploads/image/course/20201016/18e15b4e4aab78e53f19c3a83f73a8ec.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: move 10s linear infinite alternate;
+  }
+
+  /* 横向滚动 0 ~ -1720px */
+  @keyframes move {
+    0% {
+      background-position: 0 center;
+    }
+    100% {
+      background-position: -1720px center;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
